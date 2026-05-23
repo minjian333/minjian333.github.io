@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="MZ monogram">
+  <rect width="128" height="128" rx="30" fill="#7f3216" />
+  <path
+    d="M28 94V34h15l21 33 21-33h15v60H84V59L64 90 44 59v35H28Zm45 0v-12l24-31H74V34h27v12L77 82h25v12H73Z"
+    fill="#fff8f1"
+  />
+</svg>
