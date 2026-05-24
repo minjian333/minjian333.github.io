@@ -1,12 +1,14 @@
 :root {
-  --bg: #faf8f3;
+  --bg: #fcfbf8;
   --surface: #ffffff;
   --text: #171717;
   --muted: #5f5f5f;
-  --line: #e7e2d8;
+  --line: #ece7df;
   --accent: #7c3f18;
   --accent-soft: #f5ede6;
-  --shadow: 0 18px 40px rgba(38, 30, 20, 0.08);
+  --macaron-pink: #c97f93;
+  --macaron-blue: #7f9ccf;
+  --macaron-green: #7eb4a7;
 }
 
 * {
@@ -18,7 +20,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.65;
+  line-height: 1.75;
 }
 
 a {
@@ -31,38 +33,29 @@ a:hover {
 }
 
 .page {
-  width: min(920px, calc(100% - 32px));
+  width: min(780px, calc(100% - 96px));
   margin: 0 auto;
-  padding: 56px 0 72px;
-}
-
-.hero,
-.papers,
-.notes {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
+  padding: 96px 0 128px;
 }
 
 .hero {
   display: grid;
   grid-template-columns: 180px 1fr;
-  gap: 28px;
-  align-items: center;
-  padding: 28px;
+  gap: 42px;
+  align-items: start;
+  padding: 0;
 }
 
 .portrait {
   width: 180px;
   height: 180px;
-  border-radius: 18px;
+  border-radius: 10px;
   object-fit: cover;
 }
 
 .eyebrow {
-  margin: 0 0 10px;
-  color: var(--muted);
+  margin: 0 0 14px;
+  color: var(--macaron-blue);
   font-size: 0.88rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -77,6 +70,15 @@ h3 {
 
 h1 {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
+  letter-spacing: 0.02em;
+}
+
+.name-native {
+  display: inline-block;
+  margin-left: 0.2em;
+  color: var(--macaron-pink);
+  font-size: 0.92em;
+  font-weight: 600;
 }
 
 h2 {
@@ -88,17 +90,27 @@ h3 {
   font-weight: 700;
 }
 
+h3 a {
+  color: inherit;
+}
+
 .bio {
-  margin: 14px 0 0;
-  max-width: 62ch;
+  margin: 18px 0 0;
+  max-width: 64ch;
   color: var(--muted);
   font-size: 1.05rem;
+}
+
+.quote {
+  margin: 18px 0 0;
+  color: var(--macaron-green);
+  font-size: 0.98rem;
 }
 
 .actions {
   display: flex;
   gap: 12px;
-  margin-top: 22px;
+  margin-top: 32px;
 }
 
 .button {
@@ -107,25 +119,26 @@ h3 {
   justify-content: center;
   min-height: 42px;
   padding: 0 16px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: #fff;
+  border: 1px solid #ddd5cb;
+  border-radius: 6px;
+  background: transparent;
   font-weight: 600;
 }
 
 .button.primary {
   background: var(--accent-soft);
-  border-color: #e5d2c4;
+  border-color: #e7c7d1;
+  color: var(--macaron-pink);
 }
 
 .papers {
-  margin-top: 24px;
-  padding: 28px;
+  margin-top: 36px;
+  padding: 0;
 }
 
 .notes {
-  margin-top: 24px;
-  padding: 22px 28px;
+  margin-top: 36px;
+  padding: 0;
 }
 
 .notes p {
@@ -134,17 +147,18 @@ h3 {
 }
 
 .section-head p {
-  margin: 8px 0 0;
+  margin: 12px 0 0;
   color: var(--muted);
 }
 
 .legend {
   font-size: 0.96rem;
+  color: var(--macaron-blue);
 }
 
 .paper-list {
-  margin: 24px 0 0;
-  padding-left: 22px;
+  margin: 30px 0 0;
+  padding-left: 24px;
 }
 
 .plain-list {
@@ -153,12 +167,11 @@ h3 {
 }
 
 .paper-list li {
-  padding: 0 0 20px 6px;
+  padding: 0 0 16px 8px;
 }
 
 .paper-list li + li {
-  border-top: 1px solid var(--line);
-  padding-top: 20px;
+  padding-top: 16px;
 }
 
 .meta {
@@ -168,35 +181,32 @@ h3 {
 
 .note {
   margin: 0 0 10px;
-  color: var(--text);
+  color: #4f5e7e;
   font-size: 0.98rem;
 }
 
-.paper-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
+.intro,
+.papers,
+.notes {
+  max-width: 620px;
 }
+
 
 @media (max-width: 700px) {
   .page {
-    width: min(100% - 20px, 920px);
-    padding-top: 20px;
-  }
-
-  .hero,
-  .papers,
-  .notes {
-    padding: 20px;
+    width: min(100% - 32px, 780px);
+    padding-top: 40px;
+    padding-bottom: 72px;
   }
 
   .hero {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .portrait {
-    width: 132px;
-    height: 132px;
+    width: 156px;
+    height: 156px;
   }
 
   .actions {
