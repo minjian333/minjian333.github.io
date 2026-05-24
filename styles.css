@@ -46,11 +46,22 @@ a:hover {
   padding: 0;
 }
 
-.portrait {
+.portrait-frame {
   width: 180px;
-  height: 180px;
-  border-radius: 10px;
+  padding: 10px;
+  background: linear-gradient(180deg, #fffdfa 0%, #f3ede4 100%);
+  border: 1px solid #d8cfc2;
+  border-radius: 999px;
+  box-shadow: 0 14px 28px rgba(82, 67, 51, 0.1);
+}
+
+.portrait {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
   object-fit: cover;
+  border: 1px solid #e7e0d4;
+  display: block;
 }
 
 .eyebrow {
@@ -205,8 +216,12 @@ h3 a {
   }
 
   .portrait {
+    width: 100%;
+    height: auto;
+  }
+
+  .portrait-frame {
     width: 156px;
-    height: 156px;
   }
 
   .actions {
