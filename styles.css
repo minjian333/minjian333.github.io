@@ -41,6 +41,8 @@ a:hover {
 }
 
 .hero {
+  max-width: 620px;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -210,6 +212,12 @@ h3 a {
 .papers,
 .notes {
   max-width: 620px;
+}
+
+.papers,
+.notes {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
